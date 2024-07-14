@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body bgcolor="blue" text="white">
+    <h1>Welcome to JS Events</h1>
+    enter your name: <input type="text" id="fname" onchange="uppercase()">
+    <p>Text transfer to uppercase when mouse leaves</p>
+    <script>
+        function uppercase() {
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+
+        }
+    </script>
+
+    <hr style="padding: 20px; border: 0px;">
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+    style="background-color: burlywood; padding: 20px; width: 120px; height: 40px;">click over here</div>
+
+    <script>
+        function mOver(obj) {
+            obj.innerHTML = "thank you"
+            obj.style.backgroundcolor = "green";
+
+        }
+
+        function mOut(obj) {
+            obj.innerHtml = "click here"
+            obj.style.backgroundcolor = "black";
+        }
+    </script>
+
+    <hr style="padding: 20px; border: 0;">
+
+    <div onmousedown="Mdown(this)" onmouseup="Mup(this)" 
+    style="background-color: black; color: white; height: 40px; width: 120px; padding: 20px;" >click here</div>
+
+    <script>
+        function Mup(obj){
+            obj.style.backgroundcolor="green";
+            obj.innerHTML="thanks man"
+        }
+    </script>
+<fieldset>
+<marquee style="background-color: yellow; color: black;">Welldone Nandhu</marquee>
+<select name="sports">
+    <option value="cricket">cricket</option>
+    <option value="cricket">cvolleyball</option>
+    <option value="cricket">kabbadi</option>
+    <option value="cricket">football</option>
+</fieldset>
+</body>
+</html>
